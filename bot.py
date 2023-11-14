@@ -58,7 +58,7 @@ styl = f"""
 <style>
     /* not great support for :has yet (hello FireFox), but using it for now */
     .main {{
-        background-image: url('https://vior-lys.s3.amazonaws.com/img/kccnna23.png'); 
+        background-image:  url('background.png');
         background-repeat: repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -83,7 +83,7 @@ st.markdown(styl, unsafe_allow_html=True)
 
 
 def chat_input():
-    user_input = st.chat_input("What does the KubeCon + CloudNativeCon audience want to know today?")
+    user_input = st.chat_input("type something like: What is life?")
 
     if user_input:
         with st.chat_message("user"):

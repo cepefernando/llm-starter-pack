@@ -2,7 +2,7 @@
 
 echo "Create the kind cluster..."
 kind create cluster --config cluster.yaml
-
+docker build . -t demollm
 echo "Applying the LLM manifests for this demo..."
 kubectl apply -f kind/ollama-deployment.yaml
 kubectl apply -f kind/ollama-service.yaml
